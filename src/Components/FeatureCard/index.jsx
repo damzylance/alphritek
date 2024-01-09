@@ -1,4 +1,5 @@
-import { Box, Link, Text, VStack } from "@chakra-ui/react";
+import { Box, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
@@ -13,7 +14,9 @@ const FeatureCard = ({ icon, title, description }) => {
       <Text fontWeight={"400"} textAlign={"center"} fontSize={""}>
         {description}
       </Text>
-      <Link color={"#024072"}>Learn More</Link>
+      <Link to={"/products/fleet-management"} color={"#024072"}>
+        Learn More
+      </Link>
     </VStack>
   );
 };
