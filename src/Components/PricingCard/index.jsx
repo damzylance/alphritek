@@ -48,7 +48,12 @@ const PricingCard = () => {
   };
 
   return (
-    <HStack width={"full"} gap={"40px"}>
+    <HStack
+      width={"full"}
+      gap={"40px"}
+      flexDir={["column", "column", "column", "row", "row"]}
+      px={"10px"}
+    >
       <VStack
         width={"full"}
         px={"20px"}
