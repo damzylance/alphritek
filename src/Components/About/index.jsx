@@ -1,4 +1,4 @@
-import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, List, ListIcon, ListItem, Text, VStack } from "@chakra-ui/react";
 import fleetrow1 from "../../assets/fleetrow1.jpg";
 import fleetrow2 from "../../assets/fleetrow2.jpg";
 import fleetrow3 from "../../assets/fleetrow3.png";
@@ -7,6 +7,7 @@ import fleetrow5 from "../../assets/fleetrow5.jpeg";
 import fleetrow6 from "../../assets/fleetrow6.png";
 import IndustryCard from "../IndustryCard";
 import HomeLayout from "../Layout/HomeLayout";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 const About = () => {
   return (
     <HomeLayout>
@@ -34,17 +35,47 @@ const About = () => {
                 fontSize={["sm", "sm", "md", "md", "md"]}
                 maxW={"500px"}
               >
-                Using the Software-as-a-Service (SaaS) delivery model, MiX
-                Telematics leads telematics services providers globally,
-                delivering fleet management solutions to customers in more than
-                120 countries. More than 959,000 mobile assets are actively
-                managed by MiX Telematics, this number is constantly growing. In
-                addition to employing more than 1000 people, MiX Telematics has
-                a global network of more than 130 fleet partners. Our vehicle
-                telematics company has offices in South Africa, the United
-                Kingdom, the United States, Uganda, Brazil, Australia, the
-                United Arab Emirates, and Mexico.
+                Since 2017, Alphritek has been a leading tracking solutions provider in Nigeria, proudly serving esteemed clients like SPDC and various major industries across the country. Our expertise has enabled us to successfully manage nearly 1000 vehicles, encompassing diverse types and industries.
               </Text>
+              <Box  borderRadius="md"  color="white">
+      <Text fontSize="lg" fontWeight="bold" mb={2}>
+        As a comprehensive fleet telematics services company, we offer:
+      </Text>
+      <List spacing={2} mb={4}>
+        <ListItem>
+          <ListIcon as={ArrowForwardIcon} color="white" />
+          Expert installation
+        </ListItem>
+        <ListItem>
+          <ListIcon as={ArrowForwardIcon} color="white" />
+          Comprehensive training
+        </ListItem>
+        <ListItem>
+          <ListIcon as={ArrowForwardIcon} color="white" />
+          Dedicated customer support
+        </ListItem>
+      </List>
+      <Text fontSize="lg" fontWeight="bold" mb={2}>
+        Our mission is to empower businesses to optimize their fleet management, leading to:
+      </Text>
+      <List spacing={2} mb={4}>
+        <ListItem>
+          <ListIcon as={ArrowForwardIcon} color="white" />
+          Enhanced productivity
+        </ListItem>
+        <ListItem>
+          <ListIcon as={ArrowForwardIcon} color="white" />
+          Improved manpower efficiency
+        </ListItem>
+        <ListItem>
+          <ListIcon as={ArrowForwardIcon} color="white" />
+          Increased overall success
+        </ListItem>
+      </List>
+      <Text fontSize="lg" fontWeight="bold" mb={2}>
+        At Alphritek, we are committed to driving your fleet's performance and profitability.
+      </Text>
+    </Box>
             </VStack>
             <HStack
               width={"full"}
@@ -117,9 +148,9 @@ const About = () => {
             flexDir={["column", "column", "column", "row", "row"]}
             gap={"20px"}
           >
-            <IndustryCard title={"Transport and Logistics"} />
-            <IndustryCard title={"Construction"} />
-            <IndustryCard title={"Oil and Gas"} />
+            <IndustryCard title={"Transport and Logistics"} description={"Alphritek fleet management offers the ability to monitor and analyse every detail of a Logistical process helping to make proactive decisions that increase customer service levels, reduce operating costs, maximise driver and cargo safety and prolong the lifespan of any fleet, whether it be cars, trucks, ships or planes."}  />
+            <IndustryCard title={"Construction"} description={"Alphritek fleet management empowers construction managers to oversee vehicle location, movement, increase safety through geo fencing around hazardous zones and also help to make informed decisions while identifying areas of improvement"} />
+            <IndustryCard title={"Oil and Gas"} description={"Through real-time data collection and analysis, Alphritek empowers oil and gas companies to closely monitor their fleets, assets, and workforce, ultimately leading to significant benefits. Discover how this technology is reshaping the industry by enabling more informed decision-making and driving sustainable growth."} />
           </HStack>
         </VStack>
       </VStack>

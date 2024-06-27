@@ -26,9 +26,10 @@ const IndustryCard = (props) => {
       </Text>
       <Container>
         <Text textAlign={"center"} fontSize={["14px"]} fontWeight={"500"}>
-          Get complete visibility of your drivers, vehicles and equipment and
+          {props.description||`Get complete visibility of your drivers, vehicles and equipment and
           know where your vehicles are at all times. Our Transport and Logistics
-          solution makes it possible with our fleet management software.
+          solution makes it possible with our fleet management software.`}
+          
         </Text>
       </Container>
     </VStack>

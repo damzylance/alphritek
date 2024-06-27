@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import HomeLayout from "../Layout/HomeLayout";
 import logo from "../../assets/alphritek-logo.png";
-const Contact = () => {
+const Demo = () => {
   return (
     <HomeLayout>
       <Box width={"full"} bg={"#fff"} py={"50px"}>
@@ -91,52 +91,28 @@ const Contact = () => {
           <VStack width={"full"} gap={"20px"}>
             <Image src={logo} width={"100px"} />
             <Text fontWeight={"700"} fontSize={"3xl"}>
-              Request A Quote
+              Request A Demo
             </Text>
             <Text textAlign={"center"}>
               Simple. Powerful. Affordable.
               <br /> Let's find 15 minutes that work for you.
             </Text>
             <Container width={["full", "full", "full", "80%", "80%"]}>
-            <form action="https://submit-form.com/SwIHrdrja">
               <VStack width={"full"} gap={"20px"}>
                 <HStack width={"full"} gap={"20px"}>
-                  <Input name="full_name" required width={"full"}  placeholder="Full Name" />
+                  <Input width={"full"} placeholder="First Name" />
+                  <Input width={"full"} placeholder="Last Name" />
                 </HStack>
-                <Input name="company_name" required width={"full"} placeholder="Company Name" />
                 <HStack width={"full"} gap={"20px"}>
-                  <Input name="country" required width={"full"} placeholder="Country" />
-                  <Input name="phone" required width={"full"} placeholder="Phone Number" />
+                  <Input width={"full"} placeholder="Company" />
+                  <Input width={"full"} placeholder="Phone Number" />
                 </HStack>
-                <Input name="email" type="email" width={"full"} placeholder="Work Email" />
-                <Select name="fleet_size" required width={"full"} placeholder="Fleet Size">
-                  <option>1-50</option>
-                  <option>51-100</option>
-                  <option>101-250</option>
-                  <option>251-999</option>
-                  <option>1000+</option>
-                </Select>
-                <Select name="industry" required width={"full"} placeholder="Industry">
-                  <option>Construction & Material</option>
-                  <option>Services</option>
-                  <option>Transportation & Logistics</option>
-                  <option>Education</option>
-                  <option>Energy & Utilities</option>
-                  <option>Food & Beverages</option>
-                  <option>Government</option>
-                  <option>Healthcare</option>
-                  <option>Nonprofit</option>
-                  <option>Retail</option>
-                  <option>Trucking</option>
-                  <option>Others</option>
-                </Select>
-                <Textarea name="message" required width={"full"} placeholder="Your Message" />
-                <Button bg={"#d4e8f9"} type="submit" width={"full"} _hover={{backgroundColor:"#eb6655",color:"#fff"}} size={"lg"}>
+                <Input type="email" width={"full"} placeholder="Work Email" />
+                <Textarea minH={"150px"} width={"full"} placeholder="Your Message" />
+                <Button width={"full"} size={"lg"}>
                   Submit
                 </Button>
               </VStack>
-              </form>
-              
             </Container>
           </VStack>
         </HStack>
@@ -145,4 +121,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Demo;

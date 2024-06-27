@@ -2,6 +2,28 @@ import { CheckIcon, CloseIcon } from "@chakra-ui/icons";
 import { Button, HStack, Text, VStack } from "@chakra-ui/react";
 
 const PricingCard = () => {
+  const planBasic = {
+    "Driver Identification System": "Y",
+    "Vehicle Access Control System": "Y",
+    "Real-time/ Live tracking": "Y",
+    "Security Emergency Alarms": "N",
+    "Driving Behaviour Reports and Analysis.": "N",
+    "Seat-belt usage monitoring": "N",
+    "Incident/Accident Information": "N",
+    "Alerts Instant Notification": "N",
+    "Voice Communication during emergencies": "N",
+    "Data Buffer when not in range": "N",
+    "Fuel Management": "N",
+    "Satellite communication backup": "N",
+    "Tyre Pressure Monitor": "N",
+    "Digital Mapping": "N",
+    "Data Analytics Dashboard": "Y",
+    "Video capture": "N",
+    "Driver Fatigue Report": "N",
+    "Driver Fatigue Live Monitoring and alerts": "N",
+    "Road Speed Limit System": "N",
+    "Route Planning and Monitoring": "N",
+  }
   const plan1 = {
     "Driver Identification System": "Y",
     "Vehicle Access Control System": "Y",
@@ -64,14 +86,14 @@ const PricingCard = () => {
       >
         <VStack textAlign={"center"}>
           <Text fontWeight={"800"} fontSize={"2xl"}>
-            Advanced Fleet Management Solution
+            Basic Tracking
           </Text>
           <Text fontSize={"sm"}>
             For fleets that want to centralize fleet data and automate
             outsourced maintenance
           </Text>
           <Text fontSize={"3xl"} fontWeight={"900"}>
-            $10
+            $4
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
           <Button
@@ -81,7 +103,55 @@ const PricingCard = () => {
             bg={"green.700"}
             size={"lg"}
           >
-            Start Free Trial
+            Request a Quote
+          </Button>
+        </VStack>
+        <hr />
+        <VStack width={"full"} gap={"20px"}>
+          <Text textAlign={"center"} fontSize={"lg"} fontWeight={"600"}>
+            Features
+          </Text>
+          <VStack width={"full"} alignItems={"flex-start"}>
+            {Object.entries(planBasic)
+              .slice(1)
+              .map(([feature, availability]) => (
+                <ListItem
+                  key={feature}
+                  availability={availability}
+                  feature={feature}
+                />
+              ))}
+          </VStack>
+        </VStack>
+      </VStack>
+      <VStack
+        width={"full"}
+        px={"20px"}
+        py={"20px"}
+        border={"1px solid green"}
+        borderRadius={"10px"}
+        bg={"#fff"}
+      >
+        <VStack textAlign={"center"}>
+          <Text fontWeight={"800"} fontSize={"2xl"}>
+            Advanced Fleet Management Solution
+          </Text>
+          <Text fontSize={"sm"}>
+            For fleets that want to centralize fleet data and automate
+            outsourced maintenance
+          </Text>
+          <Text fontSize={"3xl"} fontWeight={"900"}>
+            $6
+          </Text>
+          <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
+          <Button
+            width={"full"}
+            my={"20px"}
+            color={"#fff"}
+            bg={"green.700"}
+            size={"lg"}
+          >
+            Request a Quote
           </Button>
         </VStack>
         <hr />
@@ -119,7 +189,7 @@ const PricingCard = () => {
             outsourced maintenance
           </Text>
           <Text fontSize={"3xl"} fontWeight={"900"}>
-            $10
+            $8
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
           <Button
@@ -129,7 +199,7 @@ const PricingCard = () => {
             bg={"green.700"}
             size={"lg"}
           >
-            Start Free Trial
+            Request a Quote
           </Button>
         </VStack>
         <hr />

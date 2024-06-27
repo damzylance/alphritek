@@ -65,6 +65,8 @@ const Header = () => {
             <NavLink link={"/solutions"} text={"Solutions"} />
             <NavLink link={"/about-us"} text={"About Us"} />
             <NavLink link={"/request-quote"} text={"Request a Quote"} />
+            <NavLink link={"/request-demo"} text={"Request a Demo"} />
+
           </HStack>
         </HStack>
         {showSubMenu && (

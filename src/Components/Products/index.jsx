@@ -195,7 +195,7 @@ const Products = () => {
             <Text fontSize={"xl"} fontWeight={"900"} color={"#024072"}>
               Pricing Plan
             </Text>
-            <HStack gap={"40px"} maxW={"900px"}>
+            <HStack gap={"40px"} maxW={"90%"}>
               <PricingCard />
             </HStack>
           </VStack>
