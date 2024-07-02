@@ -93,7 +93,7 @@ const PricingCard = () => {
             outsourced maintenance
           </Text>
           <Text fontSize={"3xl"} fontWeight={"900"}>
-            $4
+              ₦6,000
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
           <Button
@@ -141,7 +141,7 @@ const PricingCard = () => {
             outsourced maintenance
           </Text>
           <Text fontSize={"3xl"} fontWeight={"900"}>
-            $6
+          ₦10,000
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
           <Button
@@ -189,7 +189,7 @@ const PricingCard = () => {
             outsourced maintenance
           </Text>
           <Text fontSize={"3xl"} fontWeight={"900"}>
-            $8
+          ₦12,000
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
           <Button

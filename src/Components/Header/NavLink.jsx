@@ -5,12 +5,13 @@ const NavLink = ({ text, link }) => {
   return (
     <Link
       to={link}
-      fontSize={"18px"}
-      fontWeight={"400"}
       cursor={"pointer"}
-      _hover={{ color: "#024072" }}
+     
     >
+      <Text  _hover={{ color: "red" }} fontSize={"14px"}>
       {text}
+      </Text>
+      
     </Link>
   );
 };

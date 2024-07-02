@@ -13,17 +13,18 @@ import {
   VStack,
   Container,
   IconButton,
+  Button,
 } from "@chakra-ui/react";
 import { ChevronRightIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 import logo from "../../assets/alphritek-logo.png";
 import NavLink from "./NavLink";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const navigate = useNavigate()
   const btnRef = useRef();
   const url = window.location.href;
   const param = url.split("/")[3];
@@ -52,9 +53,9 @@ const Header = () => {
             <Image width={"150px"} src={logo} />
           </Link>
 
-          <HStack gap={"40px"}>
+          <HStack gap={"24px"}>
             <Text
-              fontSize={"18px"}
+              fontSize={"14px"}
               fontWeight={"400"}
               cursor={"pointer"}
               _hover={{ color: "#024072" }}
@@ -66,7 +67,21 @@ const Header = () => {
             <NavLink link={"/about-us"} text={"About Us"} />
             <NavLink link={"/request-quote"} text={"Request a Quote"} />
             <NavLink link={"/request-demo"} text={"Request a Demo"} />
+            <Link to={"https://tracking.alphritekworld.com/auth/signin"}>
+            <Button
+            bg={"#ed462f"}
+            _hover = {{background:"#024072"}}
+            fontSize={"sm"}
+            color={"#fff"}
+            borderRadius={"full"}
+            size={"md"}
+            px={"30px"}
+          >
+            Login
+          </Button>
 
+            </Link>
+            
           </HStack>
         </HStack>
         {showSubMenu && (
@@ -97,7 +112,7 @@ const Header = () => {
           pb={"12px"}
           borderBottom={"1px solid #E6E5E5"}
         >
-          <Image src={logo} width={"66px"} />
+          <Image src={logo} width={"80px"} />
 
           <IconButton
             ref={btnRef}
@@ -118,50 +133,28 @@ const Header = () => {
             <DrawerContent alignItems="center">
               <DrawerCloseButton alignSelf="end" mx={15} my={15} />
               <DrawerHeader my={15}>
-                <Text as="p"> {"ALPHRITEK"} </Text>
+                <Image width={"150px"} src={logo} alt="Aplhritek-logo"/>
               </DrawerHeader>
               <DrawerBody>
                 <VStack alignItems={"center"} gap={"40px"}>
-                  <Link
-                    to={"/"}
-                    style={{
-                      color: "#141414",
-                      fontWeight: !param ? "600" : "",
-                      fontSize: "24px",
-                    }}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to={"/about-us"}
-                    style={{
-                      color: "#141414",
-                      fontWeight: param === "pricing" ? "600" : "",
-                      fontSize: "24px",
-                    }}
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    to={"/solutions"}
-                    style={{
-                      color: "#141414",
-                      fontWeight: param === "pricing" ? "600" : "",
-                      fontSize: "24px",
-                    }}
-                  >
-                    Products and Solution
-                  </Link>
-                  <Link
-                    to={"/request-quote"}
-                    style={{
-                      color: "#141414",
-                      fontWeight: param === "faq" ? "600" : "",
-                      fontSize: "24px",
-                    }}
-                  >
-                    Request A Quote
-                  </Link>
+                <NavLink link={"/solutions"} text={"Solutions"} />
+            <NavLink link={"/about-us"} text={"About Us"} />
+            <NavLink link={"/request-quote"} text={"Request a Quote"} />
+            <NavLink link={"/request-demo"} text={"Request a Demo"} />
+            <Link to={"https://tracking.alphritekworld.com/auth/signin"}>
+            <Button
+            bg={"#ed462f"}
+            _hover = {{background:"#024072"}}
+            fontSize={"sm"}
+            color={"#fff"}
+            borderRadius={"full"}
+            size={"md"}
+            px={"30px"}
+          >
+            Login
+          </Button>
+
+            </Link>
                 </VStack>
               </DrawerBody>
             </DrawerContent>
