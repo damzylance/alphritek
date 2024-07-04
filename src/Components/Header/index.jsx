@@ -133,7 +133,7 @@ const Header = () => {
             <DrawerContent alignItems="center">
               <DrawerCloseButton alignSelf="end" mx={15} my={15} />
               <DrawerHeader my={15}>
-                <Image width={"150px"} src={logo} alt="Aplhritek-logo"/>
+                <Link to="/"><Image width={"150px"} src={logo} alt="Aplhritek-logo"/></Link>
               </DrawerHeader>
               <DrawerBody>
                 <VStack alignItems={"center"} gap={"40px"}>

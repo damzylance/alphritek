@@ -1,5 +1,5 @@
 import { CheckIcon, CloseIcon } from "@chakra-ui/icons";
-import { Button, HStack, Text, VStack } from "@chakra-ui/react";
+import { Button, HStack, Link, Text, VStack } from "@chakra-ui/react";
 
 const PricingCard = () => {
   const planBasic = {
@@ -96,15 +96,15 @@ const PricingCard = () => {
               ₦6,000
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
-          <Button
+          <Link width={"full"} href={"https://paystack.com/pay/e34yur0wrx"} target="_blank" >  <Button
             width={"full"}
             my={"20px"}
             color={"#fff"}
             bg={"green.700"}
             size={"lg"}
           >
-            Request a Quote
-          </Button>
+            Subscribe
+          </Button></Link>
         </VStack>
         <hr />
         <VStack width={"full"} gap={"20px"}>
@@ -144,15 +144,16 @@ const PricingCard = () => {
           ₦10,000
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
-          <Button
+          <Link width={"full"} href={"https://paystack.com/pay/e34yur0wrx"} target="_blank" >  <Button
             width={"full"}
             my={"20px"}
             color={"#fff"}
             bg={"green.700"}
             size={"lg"}
           >
-            Request a Quote
-          </Button>
+            Subscribe
+          </Button></Link>
+        
         </VStack>
         <hr />
         <VStack width={"full"} gap={"20px"}>
@@ -192,15 +193,15 @@ const PricingCard = () => {
           ₦12,000
           </Text>
           <Text fontSize={"xs"}>Per vehicle, billed every month</Text>
-          <Button
+          <Link width={"full"} href={"https://paystack.com/pay/e34yur0wrx"} target="_blank" >  <Button
             width={"full"}
             my={"20px"}
             color={"#fff"}
             bg={"green.700"}
             size={"lg"}
           >
-            Request a Quote
-          </Button>
+            Subscribe
+          </Button></Link>
         </VStack>
         <hr />
         <VStack width={"full"} gap={"20px"}>
